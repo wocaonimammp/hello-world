@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>	
+    <head>
+	<title>Untitled Document</title>
+	<link rel="stylesheet" href="SZ_form.css">
+	</head>
+
+<body>
+	<form name="MovieQuiz">
+    	<fieldset>
+    	<legend>MovieQuiz</legend>
+        <div1 id="box">
+        	<fieldset>
+            <legend>Question #1</legend>
+        	<p>Who is the lead characters in "Black Panther"?</p>
+        	<input type="radio" name="BP" value="c"/>Chewy
+            <br />
+        	<input type="radio" name="BP" value="t"/>T'chals
+            <br />
+        	<input type="radio" name="BP" value="k"/>Killmonger
+            <br />
+        	<input type="radio" name="BP" value="e"/>Eric
+            <br />
+            </fieldset>
+        </div1>
+        <div2 id="box">
+        	<fieldset>
+    		<legend>Question #2</legend>
+        	<p>Which movies feature Tom Hanks?</p>
+        	<input type="checkbox" name="Big" value="Big" />Big
+            <br />
+        	<input type="checkbox" name="MI" value="MI"/>Mission Impossible
+            <br />
+        	<input type="checkbox" name="SR" value="SR"/>Shavashank Redemption
+            <br />
+        	<input type="checkbox" name="CA" value="CA"/>Clous Atlas
+            <br />
+            <input type="checkbox" name="SW" value="SW"/>Star Wars
+            <br />
+        	<input type="checkbox" name="C" value="C"/>Castaway
+            <br />
+        	<input type="checkbox" name="TGM" value="TGM"/>The Green Mile
+            <br />
+            </fieldset>
+        </div2>
+        <div3 id="box">
+        	<fieldset>
+    		<legend>Question #3</legend>
+        	<p>Which character is not related to Luke Skywalker?</p>
+        	<select name="Q3">
+            <option input  value="Leia">Leia </option>
+            <option input  value="Darth Vader">Darth Vader </option>
+            <option input  value="Chewy">Chewy </option>
+            <option input  value="Fadme">Fadme </option>
+            </select>
+            </fieldset>
+        </div3>
+        <div4 id="box">
+        	<fieldset>
+    		<legend>Question #4</legend>
+        	<p>What is the name of the Nazi-fighting archaelogist played by Harrison Ford?</p>
+            <input name="Q4" type="text" placebolder="Answer here"/>
+            </fieldset>
+        </div4>
+        <div5 id="box">
+        	<fieldset>
+            <legend>Question #5</legend>
+        	<p>Name this movie: "The Hunt for <input name="Q5" type="color"/> October"</p>
+            
+        	</fieldset> 
+        </div5>
+        <div6 id="box">
+        	<fieldset>
+            <legend>Question #6</legend>
+        	<p>In "Legally Blonde," what career does she pursue?</p>
+            <input type="button" value="Janitor" onclick="answerJ()"/>
+            <input type="button" value="Teacher" onclick="answerT()"/>
+            <input type="button" value="Professional Shopper" onclick="answerP()"/>
+            <input type="button" value="Lawyer" onclick="answerL()"/>
+        	</fieldset>
+        </div6>
+        <div>
+        	<p>Thanks for playing!</p>
+        	<input type="submit" onclick="answerChecker()"/>
+        </div>
+        </fieldset>
+    </form>
+    <script>
+	function answerChecker() {
+		if(document.MovieQuiz.BP.value==="t") {
+			alert("Question 1 is CORRECT!");
+		} else {
+			alert("Question 1 is WRONG!");
+		}
+		if(document.MovieQuiz.Big.checked===true && document.MovieQuiz.CA.checked===true && document.MovieQuiz.C.checked===true && document.MovieQuiz.TGM.checked===true && document.MovieQuiz.MI.checked===false && document.MovieQuiz.SR.checked===false && document.MovieQuiz.SW.checked===false) {
+			alert("Question 2 is CORRECT!");
+		} else {
+			alert("Question 2 is WRONG!");
+		}
+		if(document.MovieQuiz.Q3.value==="Chewy") {
+			alert("Question 3 is CORRECT!");
+		} else {
+			alert("Question 3 is WRONG!");
+		}
+		if(document.MovieQuiz.Q4.value==="Indiana Jones") {
+			alert("Question 4 is CORRECT!");
+		} else {
+			alert("Question 4 is WRONG!");
+		}
+		if(document.MovieQuiz.Q5.value==="#ff0000") {
+			alert("Question 5 is CORRECT!");
+		} else {
+			alert("Question 5 is WRONG!");
+		}
+	}
+	function answerJ(){
+		alert("Question 6 is WRONG!");
+	}
+	function answerT(){
+		alert("Question 6 is WRONG!");
+	}
+	function answerP(){
+		alert("Question 6 is WRONG!");
+	}
+	function answerL(){
+		alert("Question 6 is CORRECT!");
+	}
+	</script>
+</body>
